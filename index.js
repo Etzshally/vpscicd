@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
         });
     } else {
         return res.json({
-            message: `v1) You've reached the VPS.`
+            message: `You've reached Shahpaal's VPS.`
         });
     }
 });
 
 app.listen(PORT, () => {
-    console.log('App is listening on port 3000...');
+    console.log(`App is listening on port ${PORT}...`);
 });
