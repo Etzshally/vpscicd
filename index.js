@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
         });
     } else {
         return res.json({
-            message: `You've reached the VPS.`
+            message: `v1) You've reached the VPS.`
         });
     }
 });
