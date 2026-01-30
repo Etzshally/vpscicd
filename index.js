@@ -3,16 +3,31 @@ const app = express();
 
 const PORT = process.env.PORT ?? 3000;
 
+// app.get('/', (req, res) => {
+//     const { name, msg } = req.query;
+
+//     if (name && msg) {
+//         return res.json({
+//             message: `Hello ${name}, ${msg}.`
+//         });
+//     } else {
+//         return res.json({
+//             message: `You've reached the VPS.`
+//         });
+//     }
+// });
+
 app.get('/', (req, res) => {
-    if (req.params.name && req.params.msg) {
+    const { name } = req.query;
+
+    if (name) {
         return res.json({
-            message: `Hello ${req.params.name}, ${req.params.msg}.`
+            message: `Hello ${name}!`
         });
-    }
-    else {
+    } else {
         return res.json({
-            message: `You've reached the vps.`
-        })
+            message: `You've reached the VPS.`
+        });
     }
 });
 
